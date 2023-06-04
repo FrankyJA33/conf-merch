@@ -55,3 +55,10 @@
 a {
   text-decoration: none;
 }
+
+.Checkout-icon{
+  display: flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+}

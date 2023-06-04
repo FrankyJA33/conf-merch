@@ -19,3 +19,8 @@
   text-decoration: none;
   color: #33b1ff;
 }
+
+.Header-icon {
+  width: 30px;
+  height: 30px;
+}
