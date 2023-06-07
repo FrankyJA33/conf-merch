@@ -8,7 +8,6 @@ import {Payment} from '../containers/Payment';
 import {Success} from '../containers/Success';
 import {NotFound} from '../containers/NotFound';
 import { AppProvider } from "../context/AppContext";
-import { useInitialState } from "../hooks/useInitialState";
 
 function App (){
   return (
