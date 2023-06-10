@@ -5,18 +5,19 @@ import { BsTrash } from "react-icons/bs";
 import '../styles/components/Checkout.css';
 import { v4 as uuidv4 } from 'uuid';
 
+function handleSumTotal(){
+  const {state} = useContext(AppContext);
+  const {cart} = state;
+  const sum = cart.reduce((accumulator, currentV) => accumulator + currentV.price,0);
+  return sum;
+};
+
 function Checkout() {
   const {state, removeFromCart} = useContext(AppContext);
   const {cart} = state;
 
-  console.log(uuidv4());
   const handleRemove = (product) => {
     removeFromCart(product);
-  };
-
-  const handleSumTotal = () => {
-    const sum = cart.reduce((accumulator, currentV) => accumulator + currentV.price,0);
-    return sum;
   };
 
   return (
@@ -43,4 +44,4 @@ function Checkout() {
   );
 }
 
-export {Checkout};
+export {Checkout, handleSumTotal};
